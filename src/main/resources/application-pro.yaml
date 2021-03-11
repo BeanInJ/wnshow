@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/wnshow?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Hongkong
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  servlet:
+    multipart:
+      max-request-size: 3MB
+      max-file-size: 3MB
+logging:
+  level:
+    root: info
+    com.yh: debug
+  file:
+    name: log/blog-dev.log
+server:
+  port: 8001
+woniushow:
+  imgUrl: http://woniuxy.com/train/img/teacher/
+#  imgContents: src/main/resources/static/img/
+  upload-url: upload/
+  attendanceUrl: http://www.woniuboss.com/attendance/getAttendanceData?pwd=wncq
+  nullImgURL: img/null.png
